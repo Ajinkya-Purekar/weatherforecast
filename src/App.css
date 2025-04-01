@@ -1,0 +1,155 @@
+/* Reset & General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff; /* Light mode background */
+  color: #000; /* Light mode text */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Full-Width Container */
+.weather-container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode Toggle Switch Positioned at Top-Right */
+.toggle-switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Input Field */
+input {
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  background: #ffffff;
+  color: #000;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Weather Info Box */
+.weather-info {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: #222 !important;
+  color: white !important;
+}
+
+/* Apply Dark Mode to All Elements */
+.dark-mode body {
+  background: #222 !important;
+  color: white !important;
+}
+
+.dark-mode .weather-container {
+  background: #333;
+  color: white;
+}
+
+.dark-mode .weather-info {
+  background: #444;
+  color: white;
+  box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode input {
+  background: #444;
+  color: white;
+  border: 2px solid #777;
+}
+
+.dark-mode input:focus {
+  border-color: #ff9800;
+  box-shadow: 0px 0px 8px rgba(255, 152, 0, 0.5);
+}
+
+.dark-mode button {
+  background: #ff9800;
+}
+
+.dark-mode button:hover {
+  background: #e68900;
+}
+
+/* Dark Mode Toggle Switch */
+.form-check-input {
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.form-check-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+.dark-mode .form-check-label {
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .weather-container {
+    width: 95%;
+  }
+}
